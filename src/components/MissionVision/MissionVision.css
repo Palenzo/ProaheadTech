@@ -1,0 +1,112 @@
+.mission-vision {
+  background: var(--light-color);
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mv-card {
+  background: var(--white);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.mv-decoration {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.05;
+  bottom: -50px;
+  right: -50px;
+  transition: all 0.3s ease;
+}
+
+.mission-card .mv-decoration {
+  background: var(--primary-color);
+}
+
+.vision-card .mv-decoration {
+  background: var(--secondary-color);
+}
+
+.mv-card:hover .mv-decoration {
+  transform: scale(1.2);
+  opacity: 0.08;
+}
+
+.mv-icon {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mv-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.mv-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.mission-card h3::after {
+  background: var(--primary-color);
+}
+
+.vision-card h3::after {
+  background: var(--secondary-color);
+}
+
+.mv-card p {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .mv-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mv-card {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mv-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .mv-card p {
+    font-size: 1rem;
+  }
+}
