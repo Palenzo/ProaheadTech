@@ -4,6 +4,14 @@ import './Loader.css';
 const Loader = () => {
   const [loading, setLoading] = useState(true);
 
+  // Professional technical terms to display
+  const techTerms = [
+    'SAP', 'ABAP', 'Java', 'Python', 'React', 'Node.js',
+    'AWS', 'Azure', 'DevOps', 'Cloud', 'AI/ML', 'Blockchain',
+    'Microservices', 'API', 'Database', 'Security', 'Analytics',
+    'Mobile', 'Web', 'ERP', 'CRM', 'IoT'
+  ];
+
   useEffect(() => {
     // Simulate loading time (minimum 2 seconds for smooth animation)
     const timer = setTimeout(() => {
@@ -17,6 +25,24 @@ const Loader = () => {
 
   return (
     <div className="loader-wrapper">
+      {/* Floating technical terms background */}
+      <div className="tech-terms-background">
+        {techTerms.map((term, index) => (
+          <span
+            key={index}
+            className="tech-term"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 2}s`,
+              fontSize: `${0.8 + Math.random() * 0.7}rem`
+            }}
+          >
+            {term}
+          </span>
+        ))}
+      </div>
+      
       <div className="loader-content">
         <div className="loader-logo">
           <img src="/proahead.png" alt="Proahead Technology" className="loader-logo-image" />
