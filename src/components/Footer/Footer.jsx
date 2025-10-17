@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <img src="/proahead.png" alt="Proahead Technology Logo" className="footer-logo-image" />
+              <img src="https://res.cloudinary.com/dxfyyhhus/image/upload/v1759725787/Proahead_upscayl_16x_upscayl-standard-4x_ygpr5v.png" alt="Proahead Technology Logo" className="footer-logo-image" />
               <span className="logo-text">
                 <strong>Proahead</strong> Technology
               </span>

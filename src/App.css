@@ -1,6 +1,12 @@
 .App {
   min-height: 100vh;
   background: var(--white);
+  position: relative;
+}
+
+.App.loading {
+  overflow: hidden;
+  height: 100vh;
 }
 
 /* Container */
