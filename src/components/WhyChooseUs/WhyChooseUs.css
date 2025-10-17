@@ -1,14 +1,15 @@
 .why-choose-us {
   background: var(--gradient-dark);
-  color: var(--white);
+  color: #ffffff;
+  transition: background 0.3s ease;
 }
 
 .why-choose-us .section-title h2 {
-  color: var(--white);
+  color: #ffffff;
 }
 
 .why-choose-us .section-title h2::after {
-  background: var(--white);
+  background: #ffffff;
 }
 
 .why-choose-us .section-title p {
@@ -63,7 +64,7 @@
 .reason-card h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--white);
+  color: #ffffff;
   margin-bottom: 15px;
   line-height: 1.4;
 }

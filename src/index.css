@@ -17,6 +17,20 @@
   --gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
+/* Dark Mode Theme */
+[data-theme='dark'] {
+  --primary-color: #3399ff;
+  --secondary-color: #33bbff;
+  --accent-color: #ff8c5a;
+  --dark-color: #e0e0e0;
+  --light-color: #1e1e2e;
+  --text-color: #e0e0e0;
+  --text-light: #b0b0b0;
+  --white: #121212;
+  --gradient: linear-gradient(135deg, #3399ff 0%, #33bbff 100%);
+  --gradient-dark: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,6 +38,8 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+  background: var(--white);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {

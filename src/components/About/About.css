@@ -1,5 +1,6 @@
 .about {
   background: var(--white);
+  transition: background 0.3s ease;
 }
 
 .about-content {
@@ -19,6 +20,7 @@
   line-height: 1.8;
   margin-bottom: 20px;
   text-align: justify;
+  transition: color 0.3s ease;
 }
 
 .company-info {
@@ -27,12 +29,14 @@
   background: var(--light-color);
   border-radius: 10px;
   border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
 }
 
 .info-item {
   font-size: 0.95rem;
   color: var(--text-color);
   margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
 .info-item:last-child {
@@ -42,6 +46,7 @@
 .info-item strong {
   color: var(--dark-color);
   margin-right: 8px;
+  transition: color 0.3s ease;
 }
 
 .about-values h3 {
@@ -50,6 +55,7 @@
   color: var(--dark-color);
   margin-bottom: 30px;
   text-align: center;
+  transition: color 0.3s ease;
 }
 
 .values-grid {
@@ -68,10 +74,19 @@
   border: 2px solid transparent;
 }
 
+[data-theme='dark'] .value-card {
+  background: var(--light-color);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.05);
+}
+
 .value-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   border-color: var(--primary-color);
+}
+
+[data-theme='dark'] .value-card:hover {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
 .value-icon {
@@ -86,12 +101,14 @@
   font-weight: 600;
   color: var(--dark-color);
   margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
 .value-card p {
   font-size: 0.9rem;
   color: var(--text-light);
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 /* Responsive */

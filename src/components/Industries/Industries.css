@@ -1,5 +1,6 @@
 .industries {
   background: var(--white);
+  transition: background 0.3s ease;
 }
 
 .industries-grid {
@@ -19,11 +20,21 @@
   cursor: pointer;
 }
 
+[data-theme='dark'] .industry-card {
+  background: var(--light-color);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.05);
+}
+
 .industry-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   border-color: var(--card-color);
   background: linear-gradient(135deg, var(--white) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+[data-theme='dark'] .industry-card:hover {
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, var(--light-color) 0%, rgba(30, 30, 46, 0.95) 100%);
 }
 
 .industry-icon {

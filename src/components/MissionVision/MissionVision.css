@@ -1,5 +1,6 @@
 .mission-vision {
   background: var(--light-color);
+  transition: background 0.3s ease;
 }
 
 .mv-grid {
@@ -20,9 +21,18 @@
   overflow: hidden;
 }
 
+[data-theme='dark'] .mv-card {
+  background: var(--light-color);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.05);
+}
+
 .mv-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='dark'] .mv-card:hover {
+  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
 }
 
 .mv-decoration {
@@ -63,6 +73,7 @@
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 15px;
+  transition: color 0.3s ease;
 }
 
 .mv-card h3::after {
@@ -87,6 +98,7 @@
   font-size: 1.05rem;
   color: var(--text-color);
   line-height: 1.8;
+  transition: color 0.3s ease;
 }
 
 /* Responsive */

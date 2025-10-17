@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
+import Loader from '../Loader/Loader';
 import './Contact.css';
 
 const Contact = () => {
+  const [loading, setLoading] = useState(true);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,6 +18,24 @@ const Contact = () => {
   const [fileName, setFileName] = useState('');
   const [status, setStatus] = useState({ type: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    // Show loader when component mounts
+    setLoading(true);
+    
+    // Prevent scrolling while loading
+    document.body.style.overflow = 'hidden';
+    
+    const timer = setTimeout(() => {
+      setLoading(false);
+      document.body.style.overflow = 'unset';
+    }, 2500);
+
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -126,8 +146,10 @@ const Contact = () => {
   ];
 
   return (
-    <section className="contact" id="contact">
-      <div className="container">
+    <>
+      {loading && <Loader />}
+      <section className="contact" id="contact">
+        <div className="container">
         <div className="section-title" data-aos="fade-up">
           <h2>Contact Us</h2>
           <p>Get in touch with us for your digital transformation needs</p>
@@ -288,6 +310,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

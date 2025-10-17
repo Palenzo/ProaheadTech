@@ -1,5 +1,6 @@
 .services {
   background: var(--light-color);
+  transition: background 0.3s ease;
 }
 
 .services-grid {
@@ -23,10 +24,19 @@
   border-top: 4px solid transparent;
 }
 
+[data-theme='dark'] .service-card {
+  background: var(--light-color);
+  box-shadow: 0 5px 25px rgba(255, 255, 255, 0.05);
+}
+
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   border-top-color: var(--primary-color);
+}
+
+[data-theme='dark'] .service-card:hover {
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
 }
 
 .service-icon {
@@ -42,6 +52,7 @@
   color: var(--dark-color);
   margin-bottom: 20px;
   min-height: 60px;
+  transition: color 0.3s ease;
 }
 
 .service-list {
@@ -56,6 +67,7 @@
   font-size: 0.95rem;
   color: var(--text-color);
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 .service-list li:last-child {
