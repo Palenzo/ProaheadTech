@@ -5,7 +5,7 @@ const Clients = () => {
   const clients = [
     {
       name: 'Hicron',
-      logo: 'https://cdn.worldvectorlogo.com/logos/hicron.svg'
+      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaUm-BhKKTC26yTpzB2dorW19GGWpiVXfoqw&s'
     },
     {
       name: 'Abdul Latif Jameel',
