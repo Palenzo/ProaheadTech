@@ -77,22 +77,42 @@
 /* Links */
 .footer-links {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .footer-links li {
-  margin-bottom: 12px;
+  position: relative;
+  padding-left: 0;
+}
+
+.footer-links li::before {
+  content: '→';
+  position: absolute;
+  left: -20px;
+  color: var(--accent-color);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-links li:hover::before {
+  opacity: 1;
+  left: -15px;
 }
 
 .footer-links li a,
 .footer-links li {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
   transition: all 0.3s ease;
   display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .footer-links li a:hover {
-  color: var(--white);
+  color: #ffffff;
   transform: translateX(5px);
 }
 

@@ -12,19 +12,21 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/#about' },
-    { name: 'Services', path: '/#services' },
-    { name: 'Industries', path: '/#industries' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Home', path: '/', scroll: false },
+    { name: 'About Us', path: '/', scroll: 'about' },
+    { name: 'Services', path: '/', scroll: 'services' },
+    { name: 'Industries', path: '/', scroll: 'industries' },
+    { name: 'Clients', path: '/', scroll: 'clients' },
+    { name: 'Careers', path: '/careers', scroll: false },
+    { name: 'Contact', path: '/contact', scroll: false }
   ];
 
   const services = [
-    'ERP Implementation',
-    'IT Support Services',
-    'Business Process Optimization',
-    'Custom Development',
-    'Cloud Solutions'
+    { name: 'ERP Implementation', path: '/', scroll: 'services' },
+    { name: 'IT Support Services', path: '/', scroll: 'services' },
+    { name: 'Business Process Optimization', path: '/', scroll: 'services' },
+    { name: 'Custom Development', path: '/', scroll: 'services' },
+    { name: 'Cloud Solutions', path: '/', scroll: 'services' }
   ];
 
   return (
@@ -54,7 +56,26 @@ const Footer = () => {
             <ul className="footer-links">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <Link to={link.path}>{link.name}</Link>
+                  {link.scroll ? (
+                    <a 
+                      href={`#${link.scroll}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (window.location.pathname !== '/') {
+                          window.location.href = `/#${link.scroll}`;
+                        } else {
+                          const element = document.getElementById(link.scroll);
+                          if (element) {
+                            element.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }
+                      }}
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link to={link.path}>{link.name}</Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -64,7 +85,24 @@ const Footer = () => {
             <h3>Our Services</h3>
             <ul className="footer-links">
               {services.map((service, index) => (
-                <li key={index}>{service}</li>
+                <li key={index}>
+                  <a 
+                    href={`#${service.scroll}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (window.location.pathname !== '/') {
+                        window.location.href = `/#${service.scroll}`;
+                      } else {
+                        const element = document.getElementById(service.scroll);
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }
+                    }}
+                  >
+                    {service.name}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>

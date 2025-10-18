@@ -5,11 +5,11 @@ const Clients = () => {
   const clients = [
     {
       name: 'Hicron',
-      logo: 'https://res.cloudinary.com/dxfyyhhus/image/upload/v1760788316/Hicron_tebf2v.svg'
+      logo: 'https://res.cloudinary.com/dxfyyhhus/image/upload/v1760814269/hicron_1_knau1s.svg'
     },
     {
       name: 'Abdul Latif Jameel',
-      logo: 'https://res.cloudinary.com/dxfyyhhus/image/upload/v1760788314/ALj_v9jyd4.svg'
+      logo: 'https://res.cloudinary.com/dxfyyhhus/image/upload/v1760814270/logo-abdul-latif-jameel_g3ejrq.svg'
     },
     {
       name: 'E.A. Juffali & Brothers',
@@ -21,7 +21,7 @@ const Clients = () => {
     },
     {
       name: 'Saud Bahwan Group',
-      logo: 'https://www.saudbahwangroup.com/images/logo.png'
+      logo: 'https://res.cloudinary.com/dxfyyhhus/image/upload/v1760814269/Saud_fblaur.svg'
     },
     {
       name: 'Deloitte',
