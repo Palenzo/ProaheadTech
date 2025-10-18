@@ -25,7 +25,7 @@ const Clients = () => {
     },
     {
       name: 'Deloitte',
-      logo: 'https://res.cloudinary.com/dxfyyhhus/image/upload/v1760788324/Delloite_foevyr.svg'
+      logo: 'https://cdn.worldvectorlogo.com/logos/deloitte-1.svg'
     },
     {
       name: 'Accenture',
