@@ -33,7 +33,7 @@ const Clients = () => {
     },
     {
       name: 'Nissan',
-      logo: 'https://res.cloudinary.com/dxfyyhhus/image/upload/v1760788324/Nissna_uxuznu.svg'
+      logo: 'https://cdn.worldvectorlogo.com/logos/nissan-6.svg'
     }
   ];
 
