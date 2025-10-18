@@ -1,0 +1,213 @@
+.our-approach {
+  background: var(--light-color);
+  transition: background 0.3s ease;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.approach-card {
+  background: var(--white);
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+[data-theme='dark'] .approach-card {
+  background: var(--light-color);
+  box-shadow: 0 5px 25px rgba(255, 255, 255, 0.05);
+}
+
+.approach-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-color);
+}
+
+[data-theme='dark'] .approach-card:hover {
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+}
+
+.approach-icon {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.approach-card:hover .approach-icon {
+  transform: scale(1.1);
+}
+
+.approach-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.approach-card p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  background: var(--white);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .philosophy-section {
+  background: var(--light-color);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.05);
+}
+
+.philosophy-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 30px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.philosophy-content p {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+  transition: color 0.3s ease;
+}
+
+.philosophy-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Capabilities Section */
+.capabilities-section {
+  background: var(--white);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .capabilities-section {
+  background: var(--light-color);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.05);
+}
+
+.capabilities-section h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 30px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.capabilities-list {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.capability-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: var(--light-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .capability-item {
+  background: #1a1a2e;
+}
+
+.capability-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .capability-item:hover {
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+
+.capability-item span {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.focus-statement {
+  background: var(--gradient);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.focus-statement p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.focus-statement strong {
+  font-weight: 700;
+}
+
+.focus-statement em {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-section,
+  .capabilities-section {
+    padding: 30px 25px;
+  }
+
+  .philosophy-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .capabilities-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .philosophy-content p {
+    font-size: 1rem;
+  }
+}

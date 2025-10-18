@@ -13,6 +13,9 @@ import Services from './components/Services/Services';
 import Industries from './components/Industries/Industries';
 import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
 import MissionVision from './components/MissionVision/MissionVision';
+import OurApproach from './components/OurApproach/OurApproach';
+import Clients from './components/Clients/Clients';
+import FounderMessage from './components/FounderMessage/FounderMessage';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
@@ -57,8 +60,11 @@ function App() {
               <About />
               <Services />
               <Industries />
+              <Clients />
               <WhyChooseUs />
               <MissionVision />
+              <OurApproach />
+              <FounderMessage />
             </>
           } />
           <Route path="/contact" element={<Contact />} />

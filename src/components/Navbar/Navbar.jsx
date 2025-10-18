@@ -58,6 +58,7 @@ const Navbar = () => {
             <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
             <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a></li>
             <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a></li>
+            <li><a href="#clients" onClick={(e) => { e.preventDefault(); scrollToSection('clients'); }}>Clients</a></li>
             <li><a href="#industries" onClick={(e) => { e.preventDefault(); scrollToSection('industries'); }}>Industries</a></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)} className="btn btn-primary btn-nav">Contact Us</Link></li>
           </ul>
