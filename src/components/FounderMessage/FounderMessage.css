@@ -1,14 +1,15 @@
 .founder-message {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: #ffffff;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
   position: relative;
   isolation: isolate;
 }
 
-/* Ensure visibility in light theme */
+/* Light theme - white background */
 [data-theme='light'] .founder-message {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: var(--dark-color);
 }
 
 .founder-content {
@@ -28,11 +29,11 @@
   transition: all 0.3s ease;
 }
 
-/* Enhanced visibility for light theme */
+/* Light theme card styling */
 [data-theme='light'] .founder-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
 .founder-card::before {
