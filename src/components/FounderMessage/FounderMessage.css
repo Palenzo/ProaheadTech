@@ -1,7 +1,14 @@
 .founder-message {
-  background: var(--gradient-dark);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: #ffffff;
   transition: background 0.3s ease;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Ensure visibility in light theme */
+[data-theme='light'] .founder-message {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
 .founder-content {
@@ -10,15 +17,22 @@
 }
 
 .founder-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08);
   padding: 60px 50px;
   border-radius: 25px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+}
+
+/* Enhanced visibility for light theme */
+[data-theme='light'] .founder-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .founder-card::before {

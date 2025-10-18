@@ -55,12 +55,12 @@ const Navbar = () => {
           </button>
 
           <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
-            <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
             <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a></li>
             <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a></li>
             <li><a href="#clients" onClick={(e) => { e.preventDefault(); scrollToSection('clients'); }}>Clients</a></li>
             <li><a href="#industries" onClick={(e) => { e.preventDefault(); scrollToSection('industries'); }}>Industries</a></li>
             <li><Link to="/careers" onClick={() => setMenuOpen(false)}>Careers</Link></li>
+            <li><Link to="/admin/login" onClick={() => setMenuOpen(false)}>Admin</Link></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)} className="btn btn-primary btn-nav">Contact Us</Link></li>
           </ul>
         </div>
