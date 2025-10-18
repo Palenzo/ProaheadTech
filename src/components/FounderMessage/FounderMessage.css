@@ -36,6 +36,41 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
+/* Light theme typography and link colors */
+[data-theme='light'] .message-quote,
+[data-theme='light'] .message-description,
+[data-theme='light'] .founder-details h3,
+[data-theme='light'] .founder-tagline,
+[data-theme='light'] .motto-section h4,
+[data-theme='light'] .motto-section p {
+  color: #0a0a0a;
+}
+
+[data-theme='light'] .founder-info {
+  border-top: 2px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .founder-link {
+  background: rgba(13, 110, 253, 0.08);
+  border: 2px solid rgba(13, 110, 253, 0.3);
+  color: #0d6efd;
+}
+
+[data-theme='light'] .founder-link:hover {
+  background: rgba(13, 110, 253, 0.18);
+  border-color: #0d6efd;
+  box-shadow: 0 5px 20px rgba(13, 110, 253, 0.25);
+}
+
+[data-theme='light'] .founder-link svg {
+  color: #0d6efd;
+}
+
+[data-theme='light'] .motto-section {
+  background: rgba(13, 110, 253, 0.06);
+}
+
 .founder-card::before {
   content: '';
   position: absolute;
@@ -45,6 +80,10 @@
   height: 200%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
   animation: rotate 20s linear infinite;
+}
+
+[data-theme='light'] .founder-card::before {
+  background: radial-gradient(circle, rgba(13, 110, 253, 0.08) 0%, transparent 70%);
 }
 
 @keyframes rotate {
@@ -60,6 +99,11 @@
   transform: translateY(-5px);
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
   border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='light'] .founder-card:hover {
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
+  border-color: rgba(13, 110, 253, 0.35);
 }
 
 .quote-icon {
