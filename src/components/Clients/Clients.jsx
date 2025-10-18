@@ -5,19 +5,19 @@ const Clients = () => {
   const clients = [
     {
       name: 'Hicron',
-      logo: 'https://www.hicron.com/wp-content/uploads/2019/11/hicron_logo-1.svg'
+      logo: 'https://cdn.worldvectorlogo.com/logos/hicron.svg'
     },
     {
       name: 'Abdul Latif Jameel',
-      logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Abdul_Latif_Jameel_logo.svg/1200px-Abdul_Latif_Jameel_logo.svg.png'
+      logo: 'https://www.alj.com/assets/alj-logo.svg'
     },
     {
       name: 'E.A. Juffali & Brothers',
-      logo: 'https://www.juffali.com/wp-content/uploads/2021/03/cropped-Juffali-Logo-1.png'
+      logo: 'https://www.juffali.com/wp-content/themes/juffali/assets/images/logo.svg'
     },
     {
       name: 'NTPC',
-      logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/09/NTPC_Logo.svg/1200px-NTPC_Logo.svg.png'
+      logo: 'https://www.ntpc.co.in/sites/all/themes/ntpc/images/logo.svg'
     },
     {
       name: 'Saud Bahwan Group',
@@ -25,15 +25,15 @@ const Clients = () => {
     },
     {
       name: 'Deloitte',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Deloitte.svg/2560px-Deloitte.svg.png'
+      logo: 'https://cdn.worldvectorlogo.com/logos/deloitte-1.svg'
     },
     {
       name: 'Accenture',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/2560px-Accenture.svg.png'
+      logo: 'https://cdn.worldvectorlogo.com/logos/accenture-4.svg'
     },
     {
       name: 'Nissan',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nissan_logo.svg/2560px-Nissan_logo.svg.png'
+      logo: 'https://cdn.worldvectorlogo.com/logos/nissan-6.svg'
     }
   ];
 
