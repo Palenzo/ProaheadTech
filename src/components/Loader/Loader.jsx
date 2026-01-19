@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import CloudIcon from '@mui/icons-material/Cloud';
 import './Loader.css';
 
 const Loader = () => {
@@ -45,12 +44,9 @@ const Loader = () => {
       </div>
 
       <div className="loader-content">
-        {/* Cloud with logo */}
+        {/* Logo only */}
         <div className="cloud-container">
-          <CloudIcon className="cloud-icon" />
-          <div className="logo-in-cloud">
-            <img src="/proahead.png" alt="Proahead Technology" className="loader-logo-image" />
-          </div>
+          <img src="/proahead.png" alt="Proahead Technology" className="loader-main-logo" />
         </div>
 
         {/* Main text animation */}

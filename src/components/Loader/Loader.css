@@ -117,14 +117,14 @@
   }
 }
 
-.cloud-icon {
-  font-size: 180px !important;
-  color: rgba(255, 255, 255, 0.9);
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
-  animation: pulse-cloud 2s ease-in-out infinite;
+.loader-main-logo {
+  width: 220px;
+  height: auto;
+  filter: brightness(0) invert(1) drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+  animation: pulse-logo 2s ease-in-out infinite;
 }
 
-@keyframes pulse-cloud {
+@keyframes pulse-logo {
   0%, 100% {
     transform: scale(1);
     opacity: 0.9;
@@ -133,29 +133,6 @@
     transform: scale(1.05);
     opacity: 1;
   }
-}
-
-.logo-in-cloud {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: rotate-logo 10s linear infinite;
-}
-
-@keyframes rotate-logo {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-.loader-logo-image {
-  height: 60px;
-  width: auto;
-  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 /* Text animation */
