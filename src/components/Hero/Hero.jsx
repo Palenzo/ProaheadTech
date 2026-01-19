@@ -2,15 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PublicIcon from '@mui/icons-material/Public';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import ThreeHero from '../ThreeHero/ThreeHero';
 import './Hero.css';
 
 const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-background">
-        <div className="hero-shape shape-1"></div>
-        <div className="hero-shape shape-2"></div>
-        <div className="hero-shape shape-3"></div>
+        <ThreeHero />
       </div>
       
       <div className="container">
