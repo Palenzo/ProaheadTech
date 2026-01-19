@@ -25,7 +25,7 @@ const FounderMessage = () => {
                 "I always believe that nothing is 100% complete, there is always a scope of improvement."
               </p>
               <p className="message-description">
-                This philosophy drives everything we do at Proahead Technologies. We are committed 
+                This philosophy drives everything we do at <span style={{ color: 'black' }}>Pro</span><span style={{ color: 'orange' }}>Ahead</span> Technologies. We are committed 
                 to continuous learning, innovation, and delivering excellence to our clients. Our 
                 journey is about constant evolution and helping businesses transform through technology.
               </p>
@@ -33,9 +33,9 @@ const FounderMessage = () => {
 
             <div className="founder-info">
               <div className="founder-details">
-                <h3>Dharmkrit Bhagat</h3>
+                <h3>Priyanka Kumari</h3>
                 <p className="founder-title">Founder & CEO</p>
-                <p className="founder-tagline">Proahead Technology Solution Pvt. Ltd.</p>
+                <p className="founder-tagline"><span style={{ color: 'black' }}>Pro</span><span style={{ color: 'orange' }}>Ahead</span> Technology Solution Pvt. Ltd.</p>
               </div>
 
               <div className="founder-links">

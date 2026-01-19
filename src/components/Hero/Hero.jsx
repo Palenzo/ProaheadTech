@@ -20,7 +20,7 @@ const Hero = () => {
               <PublicIcon sx={{ fontSize: 20 }} /> Your Digital Partner
             </span>
             <h1 className="hero-title">
-              Welcome to <span className="gradient-text">Proahead</span><br />
+              Welcome to <span style={{ color: 'black' }}>Pro</span><span style={{ color: 'orange' }}>Ahead</span><br />
               Technology Solution Pvt. Ltd.
             </h1>
             <p className="hero-description">

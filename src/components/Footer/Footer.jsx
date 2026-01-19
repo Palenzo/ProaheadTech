@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="footer-logo">
               <img src="/proahead.png" alt="Proahead Technology Logo" className="footer-logo-image" />
               <span className="logo-text">
-                <strong>Proahead</strong> Technology
+                <strong><span style={{ color: 'black' }}>Pro</span><span style={{ color: 'orange' }}>Ahead</span></strong> Technology
               </span>
             </div>
             <p className="footer-tagline">Your Digital Partner</p>
@@ -144,7 +144,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Proahead Technology Solution Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; {currentYear} <span style={{ color: 'black' }}>Pro</span><span style={{ color: 'orange' }}>Ahead</span> Technology Solution Pvt. Ltd. All rights reserved.</p>
           <div className="footer-social">
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <LinkedInIcon />

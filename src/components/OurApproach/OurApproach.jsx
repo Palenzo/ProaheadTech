@@ -54,7 +54,7 @@ const OurApproach = () => {
       <div className="container">
         <div className="section-title" data-aos="fade-up">
           <h2>Our Approach & Values</h2>
-          <p>What Proahead Technologies Has Accomplished</p>
+          <p>What <span style={{ color: 'black' }}>Pro</span><span style={{ color: 'orange' }}>Ahead</span> Technologies Has Accomplished</p>
         </div>
 
         <div className="approach-grid" data-aos="fade-up" data-aos-delay="200">
@@ -90,7 +90,7 @@ const OurApproach = () => {
               your needs and tailor our approach, and craft solutions to fulfill them.
             </p>
             <p>
-              At Proahead Technologies, we determine success by results. We deliver solutions which 
+              At <span style={{ color: 'black' }}>Pro</span><span style={{ color: 'orange' }}>Ahead</span> Technologies, we determine success by results. We deliver solutions which 
               are well equipped and specifically configured to transform requirements into meaningful 
               results and deliver tangible business value. We keep our commitments and abide by project timelines.
             </p>

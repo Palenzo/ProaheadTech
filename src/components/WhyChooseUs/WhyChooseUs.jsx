@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
     <section className="why-choose-us" id="why-choose-us">
       <div className="container">
         <div className="section-title" data-aos="fade-up">
-          <h2>Why Choose Proahead?</h2>
+          <h2>Why Choose <span style={{ color: 'black' }}>Pro</span><span style={{ color: 'orange' }}>Ahead</span>?</h2>
           <p>Your trusted partner for digital transformation</p>
         </div>
 

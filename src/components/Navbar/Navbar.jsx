@@ -40,7 +40,7 @@ const Navbar = () => {
           <Link to="/" className="navbar-logo">
             <img src="/proahead.png" alt="Proahead Technology Logo" className="logo-image" />
             <span className="logo-text">
-              <strong>Proahead</strong> Technology
+              <strong><span style={{ color: 'black' }}>Pro</span><span style={{ color: 'orange' }}>Ahead</span></strong> Technology
             </span>
           </Link>
 
