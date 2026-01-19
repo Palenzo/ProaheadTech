@@ -118,7 +118,7 @@
 }
 
 .loader-main-logo {
-  width: 220px;
+  width: 350px;
   height: auto;
   filter: brightness(0) invert(1) drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
   animation: pulse-logo 2s ease-in-out infinite;
