@@ -65,9 +65,9 @@ const Contact = () => {
     try {
       // Initialize EmailJS with your credentials
       // Replace these with your actual EmailJS credentials
-      const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
-      const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
-      const userID = 'YOUR_USER_ID'; // Replace with your EmailJS user ID
+      const serviceID = 'service_ayzjlt8'; // Replace with your EmailJS service ID
+      const templateID = 'template_ghd5r6e'; // Replace with your EmailJS template ID
+      const publicKey = '81_8l6LcmLgKdcAlT'; // Replace with your EmailJS user ID
 
       const templateParams = {
         from_name: formData.name,
@@ -76,7 +76,7 @@ const Contact = () => {
         company: formData.company,
         subject: formData.subject,
         message: formData.message,
-        to_email: 'your-email@example.com' // Replace with your receiving email
+        to_email: 'proahead2025@gmail.com' // Replace with your receiving email
       };
 
       // If you have a file, you can convert it to base64 or handle it separately
@@ -84,11 +84,11 @@ const Contact = () => {
         const reader = new FileReader();
         reader.onload = async () => {
           templateParams.attachment = reader.result;
-          await sendEmail(serviceID, templateID, userID, templateParams);
+          await sendEmail(serviceID, templateID, publicKey, templateParams);
         };
         reader.readAsDataURL(formData.file);
       } else {
-        await sendEmail(serviceID, templateID, userID, templateParams);
+        await sendEmail(serviceID, templateID, publicKey, templateParams);
       }
     } catch (error) {
       console.error('Error:', error);
@@ -100,9 +100,9 @@ const Contact = () => {
     }
   };
 
-  const sendEmail = async (serviceID, templateID, userID, templateParams) => {
+  const sendEmail = async (serviceID, templateID, publicKey, templateParams) => {
     try {
-      await emailjs.send(serviceID, templateID, templateParams, userID);
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
       setStatus({ 
         type: 'success', 
         message: 'Thank you! Your message has been sent successfully. We will get back to you soon.' 
