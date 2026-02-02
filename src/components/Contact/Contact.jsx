@@ -64,10 +64,9 @@ const Contact = () => {
 
     try {
       // Initialize EmailJS with your credentials
-      // Replace these with your actual EmailJS credentials
-      const serviceID = 'service_ayzjlt8'; // Replace with your EmailJS service ID
-      const templateID = 'template_ghd5r6e'; // Replace with your EmailJS template ID
-      const publicKey = '81_8l6LcmLgKdcAlT'; // Replace with your EmailJS user ID
+      const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+      const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
       const templateParams = {
         from_name: formData.name,
