@@ -12,10 +12,9 @@ const Contact = () => {
     company: '',
     subject: '',
     message: '',
-    file: null
+    fileLink: '' // Changed from 'file' to 'fileLink'
   });
 
-  const [fileName, setFileName] = useState('');
   const [status, setStatus] = useState({ type: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -45,18 +44,6 @@ const Contact = () => {
     }));
   };
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      if (file.size > 5242880) { // 5MB limit
-        setStatus({ type: 'error', message: 'File size should be less than 5MB' });
-        return;
-      }
-      setFormData(prev => ({ ...prev, file }));
-      setFileName(file.name);
-    }
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -67,7 +54,7 @@ const Contact = () => {
       const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
       const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
       const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-
+      
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -75,20 +62,13 @@ const Contact = () => {
         company: formData.company,
         subject: formData.subject,
         message: formData.message,
-        to_email: 'proahead2025@gmail.com' // Replace with your receiving email
+        file_link: formData.fileLink, // Pass the link property
+        to_email: 'proahead2025@gmail.com'
       };
 
-      // If you have a file, you can convert it to base64 or handle it separately
-      if (formData.file) {
-        const reader = new FileReader();
-        reader.onload = async () => {
-          templateParams.attachment = reader.result;
-          await sendEmail(serviceID, templateID, publicKey, templateParams);
-        };
-        reader.readAsDataURL(formData.file);
-      } else {
-        await sendEmail(serviceID, templateID, publicKey, templateParams);
-      }
+      // Send email directly without file reader logic
+      await sendEmail(serviceID, templateID, publicKey, templateParams);
+      
     } catch (error) {
       console.error('Error:', error);
       setStatus({ 
@@ -113,9 +93,8 @@ const Contact = () => {
         company: '',
         subject: '',
         message: '',
-        file: null
+        fileLink: '' // Reset link field
       });
-      setFileName('');
     } catch (error) {
       throw error;
     } finally {
@@ -264,22 +243,19 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <div className="form-group file-upload-group">
-                <label htmlFor="file">Attach File (optional)</label>
-                <div className="file-upload">
-                  <input
-                    type="file"
-                    id="file"
-                    name="file"
-                    onChange={handleFileChange}
-                    accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png"
-                  />
-                  <label htmlFor="file" className="file-upload-label">
-                    <i className="fas fa-cloud-upload-alt"></i>
-                    <span>{fileName || 'Choose file (Max 5MB)'}</span>
-                  </label>
-                </div>
-                <small>Accepted formats: PDF, DOC, DOCX, TXT, JPG, PNG</small>
+              <div className="form-group">
+                <label htmlFor="fileLink">File Attachment (Link via Google Drive / Dropbox)</label>
+                <input
+                  type="url"
+                  id="fileLink"
+                  name="fileLink"
+                  value={formData.fileLink}
+                  onChange={handleChange}
+                  placeholder="Paste your shared file link here (optional)"
+                />
+                <small className="form-text-muted" style={{ display: 'block', marginTop: '5px', fontSize: '0.85rem', color: '#666' }}>
+                  <i className="fas fa-info-circle"></i> To share a file, please upload it to Google Drive or Dropbox and paste the shareable link here.
+                </small>
               </div>
 
               {status.message && (
